@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>
+			Working a problem
+		</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!-- 
+		<script src="../jquery-2.1.1.min.js"></script>
+ -->
+		<script src="Crawler.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("#crawler").click(function() {
+					var brandNewCrawler = new Crawler();
+					var data = brandNewCrawler.init("33458");
+					brandNewCrawler.startCrawling(data);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Crawler</h1>
+		<input type="button" id="crawler" value="Start crawling" >
+		<br>
+	</body>
+</html>
